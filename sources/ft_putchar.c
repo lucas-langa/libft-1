@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:46:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/21 11:57:05 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/21 14:20:47 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/21 14:32:13 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
-int		main(int ac, char **av)
+void	ft_putchar(const char c)
 {
-	if (ac == 2)
-	{
-		ft_putstr("This string is ");
-		ft_putnbr(ft_strlen(av[1]));
-		ft_putstr(" long\n");
-		ft_putstr(av[1]);
-		ft_putchar('\n');
-	}
-
-	return (0);
+	write(1, &c, 1);
 }

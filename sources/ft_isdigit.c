@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:46:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/21 11:57:05 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/21 16:05:32 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/21 16:12:02 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
-int		main(int ac, char **av)
+int	ft_isdigit(const char c)
 {
-	if (ac == 2)
+	if (c >= 48 && c <= 57)
 	{
-		ft_putstr("This string is ");
-		ft_putnbr(ft_strlen(av[1]));
-		ft_putstr(" long\n");
-		ft_putstr(av[1]);
-		ft_putchar('\n');
+		return (1);
 	}
-
 	return (0);
 }

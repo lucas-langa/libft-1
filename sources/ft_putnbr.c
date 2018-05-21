@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:46:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/21 11:57:05 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/21 12:49:48 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/21 14:20:05 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
-int		main(int ac, char **av)
+void	ft_putnbr(int num)
 {
-	if (ac == 2)
+	if (num < 0)
+		num = -num;
+	if (num >= 10)
 	{
-		ft_putstr("This string is ");
-		ft_putnbr(ft_strlen(av[1]));
-		ft_putstr(" long\n");
-		ft_putstr(av[1]);
-		ft_putchar('\n');
+		ft_putnbr(num / 10);
+		ft_putnbr(num % 10);
 	}
-
-	return (0);
+	else
+		ft_putchar(num + 48);
 }
