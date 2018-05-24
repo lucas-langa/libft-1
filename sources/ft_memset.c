@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:46:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/21 11:57:05 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/24 10:35:17 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/24 11:31:00 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../headers/libft.h"
 
-int		main(int ac, char **av)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (ac == 2)
-	{
-		ft_putstr("This string is ");
-		ft_putnbr(ft_strlen(av[1]));
-		ft_putstr(" long\n");
-		ft_putstr(av[1]);
-		ft_putchar('\n');
-	}
+	unsigned char	*str;
+	int				i;
 
-	return (0);
+	if (len == 0)
+	{
+		return (b);
+	}
+	str = (unsigned char *)b;
+	i = 0;
+	while (len != 0)
+	{
+		str[i] = (unsigned char)c;
+		len--;
+		i++;
+	}
+	return (b);
 }
