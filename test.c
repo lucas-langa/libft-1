@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:11:11 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/24 16:58:56 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/05/25 14:23:48 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		main(int ac, char **av)
 {
 	if (ac == 2)
 	{
+		ft_putnbr(-1);
+		ft_putnbr(ft_atoi(av[1]));
 		ft_putstr("This is ");
 		ft_putnbr(ft_strlen(av[1]));
 		ft_putstr(" chars long\n");
