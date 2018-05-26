@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:11:11 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/26 13:43:32 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/05/26 17:21:00 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ int		main(int ac, char **av)
 	{
 		ft_putstr(ft_memset(av[1], ft_atoi(av[2]),ft_atoi(av[3])));
 		ft_putchar('\n');
+		ft_putstr("testing for memcpy\n");
+		ft_putstr(ft_memcpy(av[1], av[2], ft_atoi(av[3])));
+		ft_putchar('\n');
+		ft_putnbr(ft_atoi(av[3]));
 	}
 	return (0);
 }
