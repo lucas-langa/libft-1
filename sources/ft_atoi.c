@@ -6,15 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 07:23:37 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/27 16:51:55 by root             ###   ########.fr       */
+/*   Updated: 2018/05/27 16:56:49 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
-
-/*
- **this is a comment
- */
 
 int		ft_atoi(const char *str)
 {
