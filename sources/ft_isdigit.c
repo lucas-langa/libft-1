@@ -6,17 +6,15 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 16:05:32 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/24 11:18:33 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/05/27 09:08:54 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-int	ft_isdigit(const char c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-	{
 		return (1);
-	}
 	return (0);
 }

@@ -1,43 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/25 07:23:37 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/27 16:51:55 by root             ###   ########.fr       */
+/*   Created: 2018/05/27 16:11:45 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/27 16:52:25 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
-
-/*
- **this is a comment
- */
-
-int		ft_atoi(const char *str)
+char	*ft_strcat(char *dest, const char *src)
 {
-	int	sign;
-	int num;
-	int i;
+	char	*tmp;
 
-	i = 0;
-	sign = 1;
-	num = 0;
-	while (str[i] >= 9 && str[i] <= 13)
-	{
-		i++;
-	}
-	if (str[i] == 45)
-	{
-		sign = -1;
-		i++;
-	}
-	while (ft_isdigit(str[i]) == 1)
-	{
-		num = (num * 10) + (str[i] - 48);
-		i++;
-	}
-	return (num * sign);
+	tmp = dest;
+	while (*dest)
+		dest++;
+	while (*dest++ = *src++)
+		;
+	return (tmp);
 }
