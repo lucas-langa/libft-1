@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:11:11 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/27 15:55:42 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/05/28 10:01:03 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,19 @@ int		main(int ac, char **av)
 	}
 	if (ac == 4)
 	{
-		/*ft_putstr(ft_memset(av[1], ft_atoi(av[2]),ft_atoi(av[3])));
-		ft_putchar(10);
-		ft_putstr("testing for memcpy\n");
-		ft_putstr(ft_memcpy(av[1], av[2], ft_atoi(av[3])));
-		ft_putchar(10);
-		ft_putnbr(ft_atoi(av[3]));
+		//ft_putstr(ft_memset(av[1], ft_atoi(av[2]),ft_atoi(av[3])));
+		//ft_putchar(10);
+		//ft_putstr("testing for memcpy\n");
+		//ft_putstr(ft_memcpy(av[1], av[2], ft_atoi(av[3])));
+		//ft_putchar(10);
+		//ft_putnbr(ft_atoi(av[3]));
 		ft_putstr("\nTesting memmove\n");
 		ft_putstr((const char *)ft_memmove(av[1], av[2], ft_atoi(av[3])));
-		ft_putchar(10);
-		ft_putstr("Testing memchr\n");
-		printf("%s", ft_memchr(av[1], av[2][0], ft_atoi(av[3])));*/
-		ft_putstr("Testing memcmp\n");
-		ft_putnbr(ft_memcmp(av[1], av[2], ft_atoi(av[3])));
+		//ft_putchar(10);
+		//ft_putstr("Testing memchr\n");
+		//printf("%s", ft_memchr(av[1], av[2][0], ft_atoi(av[3])));
+		//ft_putstr("Testing memcmp\n");
+		//ft_putnbr(ft_memcmp(av[1], av[2], ft_atoi(av[3])));
 		ft_putchar(10);
 	}
 	if (ac == 5)

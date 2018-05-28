@@ -1,46 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/27 13:35:20 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/28 16:10:05 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/28 08:04:16 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/28 18:28:27 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-/*
-** Compare src and dst to check if string reversable or not
-** Memory allocated depending diffirence between src and dst
-*/
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t		i;
-	char		*buf1;
-	const char	*buf2;
+	int	i;
 
 	i = 0;
-	buf1 = (char *)dst;
-	buf2 = (const char *)src;
-	if (dst < src)
+	while ((s[i] != (char)c) && s[i] != '\0')
 	{
-		while (i < len)
-		{
-			buf1[i] = buf2[i];
-			i++;
-		}
+		if (s[i] == (char)c)
+			return ((char *)s);
+		i++;
 	}
-	else
-	{
-		while (i < len)
-		{
-			buf1[len - i - 1] = buf2[len - i - 1];
-			i++;
-		}
-	}
-	return (dst);
+	return (NULL);
 }

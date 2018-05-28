@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:46:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/28 10:45:02 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/28 18:36:39 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/28 18:44:46 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <strings.h>
-/* #include "headers/libft.h"*/
+#include "../headers/libft.h"
 
-int		main(int ac, char **av)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	printf("%d\n",strchr(av[1], av[2], atoi(av[3]))); 
-	return (0);
+	char *tmp;
+
+	tmp = s1;
+	while (*s1)
+		s1++;
+	while (n > 0)
+		if (!(*s1++ = *s2++))
+			return (tmp);
+	*s1 = 0;
+	return (tmp);
 }

@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/20 13:46:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/28 10:45:02 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/28 16:13:54 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/28 17:09:00 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <strings.h>
-/* #include "headers/libft.h"*/
-
-int		main(int ac, char **av)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	printf("%d\n",strchr(av[1], av[2], atoi(av[3]))); 
-	return (0);
+	while (*s1 && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return ((*(const unsigned char *)s1) - (*(const unsigned char *)s2));
 }
