@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 16:11:45 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/28 18:50:08 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:04:54 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,20 @@
 ** Omitted ft_strlen to avoid large string len (I know what I mean bish)
 */
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	char	*tmp;
+	int	i;
+	int	j;
 
-	tmp = dest;
-	while (*dest)
-		dest++;
-	while (*dest++ == *src++)
-		;
-	return (tmp);
+	i = 0;
+	while (s1[i] != 0)
+		i++;
+	j = 0;
+	while (s2[j] != 0)
+	{
+		s1[i + j] = s2[j];
+		j++;
+	}
+	s1[i + j] = 0;
+	return (s1);
 }

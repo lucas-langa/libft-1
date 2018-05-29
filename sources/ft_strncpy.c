@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/28 18:15:50 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/29 16:45:53 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/05/29 15:46:44 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/05/29 16:54:36 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
+#include "../headers/libft.h"
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != 0)
 	{
 		dst[i] = src[i];
 		i++;
+		if (i == len)
+			return (dst);
 	}
-	dst[i] = 0;
+	while (i < len)
+	{
+		dst[i] = 0;
+		i++;
+	}
 	return (dst);
 }
