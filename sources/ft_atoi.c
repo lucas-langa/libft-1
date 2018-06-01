@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 07:23:37 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/05/27 16:56:49 by root             ###   ########.fr       */
+/*   Updated: 2018/06/01 16:14:37 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 int		ft_atoi(const char *str)
 {
-	int	sign;
-	int num;
-	int i;
+	int	stuf[3];
 
-	i = 0;
-	sign = 1;
-	num = 0;
-	while (str[i] >= 9 && str[i] <= 13)
+	stuf[0] = 0;
+	stuf[1] = 1;
+	stuf[2] = 0;
+	while ((str[stuf[0]] == 9 || str[stuf[0]] == 10 || str[stuf[0]] == 11 ||
+				str[stuf[0]] == 12 || str[stuf[0]] == 13) || str[stuf[0]] == 32)
+		stuf[0]++;
+	while (str[stuf[0]] == 45 || str[stuf[0]] == 43)
 	{
-		i++;
+		if (str[stuf[0]] == 45)
+			stuf[1] = -1;
+		stuf[0]++;
 	}
-	if (str[i] == 45)
+	while (ft_isdigit(str[stuf[0]]) == 1)
 	{
-		sign = -1;
-		i++;
+		stuf[2] = (stuf[2] * 10) + (str[stuf[0]] - 48);
+		stuf[0]++;
 	}
-	while (ft_isdigit(str[i]) == 1)
-	{
-		num = (num * 10) + (str[i] - 48);
-		i++;
-	}
-	return (num * sign);
+	return (stuf[2] * stuf[1]);
 }

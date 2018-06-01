@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memccpy.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/27 11:28:04 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/01 10:49:09 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/01 17:30:26 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/01 17:33:47 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int		ft_isprint(int c)
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*srce;
-
-	i = 0;
-	dest = (unsigned char *)dst;
-	srce = (unsigned char *)src;
-	while (i < n)
-	{
-		dest[i] = srce[i];
-		if (srce[i] == (unsigned char)c)
-			return (dst + i + 1);
-		i++;
-	}
-	return (NULL);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
