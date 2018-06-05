@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/27 16:11:45 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/05 15:27:47 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/05 14:46:57 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/05 15:36:13 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Omitted ft_strlen to avoid large string len (I know what I mean bish)
-*/
+#include "../headers/libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
-	int	j;
+	unsigned int	i;
 
 	i = 0;
-	while (s1[i] != 0)
-		i++;
-	j = 0;
-	while (s2[j] != 0)
+	if (s == NULL || f == NULL)
+		return ;
+	while (*s)
 	{
-		s1[i + j] = s2[j];
-		j++;
+		f(i++, s++);
 	}
-	s1[i + j] = 0;
-	return (s1);
 }

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/27 16:11:45 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/05 15:27:47 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/05 15:45:33 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/05 18:31:15 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Omitted ft_strlen to avoid large string len (I know what I mean bish)
-*/
+#include "../headers/libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int	i;
-	int	j;
+	char			*buf;
+	unsigned int	i;
 
 	i = 0;
-	while (s1[i] != 0)
-		i++;
-	j = 0;
-	while (s2[j] != 0)
+	if (s == NULL || f == NULL)
+		return (NULL);
+	buf = ft_memalloc(ft_strlen(s) + 1);
+	if (buf == NULL)
+		return (NULL);
+	while (*s)
 	{
-		s1[i + j] = s2[j];
-		j++;
+		buf<:i:> = f(*s);
+		i++;
+		s++;
 	}
-	s1[i + j] = 0;
-	return (s1);
+	return (buf);
 }
