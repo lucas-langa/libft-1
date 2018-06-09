@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 17:29:50 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/08 14:39:18 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/06/09 18:21:46 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <string.h>
 
 size_t				ft_strlen(const char *str);
-int					ft_putchar(int c);
+void				ft_putchar(char c);
 void				ft_putstr(const char *str);
 void				ft_putnbr(int num);
 int					ft_isdigit(int c);
@@ -63,10 +63,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
-void				ft_clear(char **bits_pcs, size_t len);
 int					*ft_iswhitespace(int c);
-char				*ft_wordn(const char *str, char c);
-size_t				ft_wordcount(const char *str, char c);
-size_t				ft_wordl(const char *str, char c);
 char				**ft_strsplit(char const *s, char c);
+char				*ft_itoa(int n);
 #endif

@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iswhitespace.c                                  :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 15:37:45 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 17:39:17 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/09 13:05:07 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/09 13:16:52 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iswhitespace(int c)
+#include <stdio.h>
+#include <string.h>
+
+int		main(int ac, char **av)
 {
-	return (c == 32 || (c >= 9 && c <= 13));
+	printf("%s", strtok(av[1], "a"));
+	return (0);
 }

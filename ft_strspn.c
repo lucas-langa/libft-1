@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/06 17:49:25 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 17:37:50 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/09 13:58:25 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/09 14:02:43 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Using the is whitespace function cleans out code really well
-** strdup and strsub also take away the admin
-*/
-
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+size_t	ft_strspn(const char *s1, const char *s2)
 {
-	size_t			i;
-	size_t			len;
+	size_t	count;
+	int		i;
 
-	if (s == NULL)
-		return (NULL);
+	count = 0;
 	i = 0;
-	while (ft_iswhitespace(s<:i:>))
-		i++;
-	len = ft_strlen(s) - 1;
-	while (len > i && ft_iswhitespace(s<:len:>))
-		len--;
-	return (len < i) ? (ft_strdup("")) : (ft_strsub(s, i, len - i + 1));
+	while (s1<:i:> != 0 && ft_strchr(s2, s1<:i++:>))
+		count++;
+	return (count);
 }

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wordcount.c                                     :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/08 12:29:40 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/08 14:43:50 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/09 14:16:35 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/09 14:25:29 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wordcount(const char *str, char c)
+size_t	ft_strcspn(const char *s1, const char *s2)
 {
-	size_t	i;
-	size_t	j;
+	size_t	spn;
+	int		i;
 
+	spn = 0;
 	i = 0;
-	j = 0;
-	while (str<:i:> != 0 )
+	while (s1<:i:> != 0)
 	{
-		if (str<:i:> != c)
-			j += 1;
-		while (str<:i:> != c && str<:i + 1:> != 0)
-			i++;
+		if (ft_strchr(s2, s1<:i:>))
+			return (spn);
 		i++;
+		spn++;
 	}
-	return (j);
+	return (spn);
 }

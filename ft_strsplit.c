@@ -6,35 +6,63 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 08:57:31 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/08 14:39:49 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/06/09 17:41:31 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(const char *s, char c)
+static int		ft_wordcount(const char *str, char c, int i)
 {
-	char	**splits;
-	size_t	i;
-	size_t	j;
+	if (*str == 0)
+		return (i);
+	else if (*str == c && *(str + 1) == c)
+		return (ft_wordcount(str + 1, c, i));
+	else if (((*str != c) && (*str != 0)) && ((*(str + 1) == c)
+				|| (*(str + 1) == 0)))
+		return (ft_wordcount(str + 1, c, i + 1));
+	else
+		return (ft_wordcount(str + 1, c, i));
+}
 
-	i = ft_wordcount(s, c);
-	splits = (char **)ft_memalloc((i + 1) * sizeof(char *));
-	if (splits == NULL)
-		return (NULL);
-	j = 0;
-	while ( j < i)
+static int		ft_lenwo(const char *s, char c)
+{
+	int	len;
+
+	len = 0;
+	while (*s != c && *s != '\0')
 	{
-		s = ft_wordn(s, c);
-		splits[j] = ft_strsub(s, 0, ft_wordl(s, c));
-		if (splits<:j:> == NULL)
-		{
-			ft_clear(splits, j);
-			return (NULL);
-		}
-		j++;
-		s += ft_wordl(s, c);
+		len++;
+		s++;
 	}
-	splits<:i:> = 0;
-	return (splits);
+	return (len);
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
+	char	**fresh;
+	int		lenw;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	lenw = ft_wordcount(s, c, i);
+	i = 0;
+	if (!(fresh = (char **)ft_memalloc(sizeof(*fresh) * 
+					(ft_wordcount(s, c, i) + 1))))
+		return (NULL);
+	while (lenw--)
+	{
+		while (*s == c && *s != '\0')
+			s++;
+		if (!(fresh[j] = ft_strsub(s, 0, ft_lenwo(s, c))))
+			return (NULL);
+		s = s + ft_lenwo(s, c);
+		j++;
+	}
+	fresh[j] = NULL;
+	return (fresh);
 }
