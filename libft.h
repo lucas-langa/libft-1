@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 17:29:50 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 18:21:46 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/06/10 15:19:13 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,13 @@
 
 size_t				ft_strlen(const char *str);
 void				ft_putchar(char c);
+void				ft_putchar_fd(char c, int fd);
 void				ft_putstr(const char *str);
+void				ft_putstr_fd(const char *str, int fd);
 void				ft_putnbr(int num);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_putendl(const char *s);
+void				ft_putendl_fd(const char *s, int fd);
 int					ft_isdigit(int c);
 void				*ft_memset(void *b, int c, size_t len);
 int					ft_atoi(const char *str);
