@@ -6,7 +6,7 @@
 #    By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/20 16:27:01 by tmaselem          #+#    #+#              #
-#    Updated: 2018/06/10 15:18:30 by tmaselem         ###   ########.fr        #
+#    Updated: 2018/06/13 18:13:51 by tmaselem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,5 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f *.out
 
 re: fclean all
