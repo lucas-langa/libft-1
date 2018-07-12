@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/18 17:53:20 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/12 11:31:02 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/12 16:41:33 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static int			ft_scanb(const int fd, char **line)
 	con = read(fd, buf, BUFF_SIZE);
 	if (con > 0)
 	{
-		buf<:con:> = 0;
 		if (!(tmp = ft_strjoin(*line, buf)))
 			return (-1);
 		free(*line);
