@@ -6,25 +6,31 @@
 #    By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/20 16:27:01 by tmaselem          #+#    #+#              #
-#    Updated: 2018/06/16 23:44:41 by tmaselem         ###   ########.fr        #
+#    Updated: 2018/07/12 16:22:24 by tmaselem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-H_PATH = libft.h
+H_PATH = includes/libft.h
+S_PATH = srcs/
 E_FLAGS = -Wall -Werror -Wextra
 OPT_FLAGS = -c -I $(H_PATH)
-SRC = ft_putchar.c ft_putstr.c ft_strlen.c ft_putnbr.c ft_isdigit.c ft_memset.c ft_atoi.c \
-	  ft_memcpy.c ft_bzero.c ft_memccpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_strcat.c \
-	  ft_strchr.c ft_strcmp.c ft_strcpy.c ft_strncat.c ft_strncpy.c ft_strdup.c ft_strlcat.c\
-	  ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strncmp.c ft_isalpha.c ft_isalnum.c\
-	  ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_memalloc.c ft_memdel.c ft_strnew.c \
-	  ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c\
-	  ft_strnequ.c ft_strsub.c ft_strjoin.c ft_iswhitespace.c ft_strtrim.c ft_itoa.c\
-	  ft_strsplit.c ft_putendl.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
-	  ft_putnbr_fd.c ft_lstnew.c\
+SRC = $(S_PATH)ft_putchar.c $(S_PATH)ft_putstr.c $(S_PATH)ft_strlen.c $(S_PATH)ft_putnbr.c\
+	  $(S_PATH)ft_isdigit.c $(S_PATH)ft_memset.c $(S_PATH)ft_atoi.c $(S_PATH)ft_memcpy.c   \
+	  $(S_PATH)ft_bzero.c $(S_PATH)ft_memccpy.c $(S_PATH)ft_memmove.c $(S_PATH)ft_memchr.c \
+	  $(S_PATH)ft_memcmp.c $(S_PATH)ft_strcat.c $(S_PATH)ft_strchr.c $(S_PATH)ft_strcmp.c  \
+	  $(S_PATH)ft_strcpy.c $(S_PATH)ft_strncat.c $(S_PATH)ft_strncpy.c $(S_PATH)ft_strdup.c \
+	  $(S_PATH)ft_strlcat.c $(S_PATH)ft_strrchr.c $(S_PATH)ft_strstr.c $(S_PATH)ft_strnstr.c \
+	  $(S_PATH)ft_strncmp.c $(S_PATH)ft_isalpha.c $(S_PATH)ft_isalnum.c $(S_PATH)ft_isascii.c\
+	  $(S_PATH)ft_isprint.c $(S_PATH)ft_toupper.c $(S_PATH)ft_tolower.c $(S_PATH)ft_memalloc.c\
+	  $(S_PATH)ft_memdel.c $(S_PATH)ft_strnew.c $(S_PATH)ft_strdel.c $(S_PATH)ft_strclr.c	  \
+	  $(S_PATH)ft_striter.c $(S_PATH)ft_striteri.c $(S_PATH)ft_strmap.c $(S_PATH)ft_strmapi.c  \
+	  $(S_PATH)ft_strequ.c $(S_PATH)ft_strnequ.c $(S_PATH)ft_strsub.c $(S_PATH)ft_strjoin.c \
+	  $(S_PATH)ft_iswhitespace.c $(S_PATH)ft_strtrim.c $(S_PATH)ft_itoa.c $(S_PATH)ft_strsplit.c\
+	  $(S_PATH)ft_putendl.c $(S_PATH)ft_putchar_fd.c $(S_PATH)ft_putstr_fd.c $(S_PATH)ft_putendl_fd.c\
+	  $(S_PATH)ft_putnbr_fd.c $(S_PATH)get_next_line.c\
 
-OBJ = $(SRC:%.c=%.o)
+OBJ = $(SRC:$(S_PATH)%.c=%.o)
 
 all: $(NAME)
 

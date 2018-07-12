@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/28 18:36:39 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/16 10:09:34 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/06/10 14:49:10 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/06/10 15:03:09 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_putstr_fd(const char *s, int fd)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	if (!(s1) && !(s2))
-		return (NULL);
 	i = 0;
-	j = 0;
-	while (s1[i] != 0)
-		i++;
-	while (s2[j] != 0 && j < n)
+	while (s<:i:> != 0)
 	{
-		s1[i + j] = s2[j];
-		j++;
+		ft_putchar_fd(s<:i:>, fd);
+		i++;
 	}
-	s1[i + j] = 0;
-	return (s1);
 }
+

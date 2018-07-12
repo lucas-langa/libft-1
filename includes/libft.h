@@ -6,24 +6,20 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 17:29:50 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/16 23:40:41 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/12 11:42:06 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 100
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
 # include <string.h>
+# include <fcntl.h>
 
-typedef struct		s_list
-{
-	void			*content;
-	size_t			consize;
-	struct s_list	*next;
-}					t_list;
-t_list				*ft_lstnew(const void *content, size_t consize);
+int					get_next_line(const int fd, char **line);
 size_t				ft_strlen(const char *str);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
