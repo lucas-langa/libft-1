@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 12:18:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/14 14:15:29 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/07/14 13:42:37 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/07/14 14:37:26 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list		*ft_lstnew(const void *content, size_t content_size)
 {
-	char	*str;
-	
-	str = ft_strnew(ft_strlen(s1));
-	if (str == NULL)
+	t_list		*fresh;
+
+	if ((fresh = (t_list*)ft_memalloc(sizeof(t_list))) == NULL)
 		return (NULL);
-	if (s1)
+	if (content == NULL) /*can content_size be zero, quiry?*/
 	{
-		ft_strcpy(str, s1);
+		fresh->content = NULL;
+		fresh->content_size = 0;
 	}
-	return (str);
+	else
+	{
+		fresh->content = ft_memalloc(content_size);
+		fresh->content = ft_memcpy(fresh->content, content, content_size);
+		fresh->content_size = content_size;
+	}
+	return (fresh);
 }

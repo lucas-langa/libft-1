@@ -6,13 +6,9 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 16:11:45 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/07 14:14:46 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:09:38 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Omitted ft_strlen to avoid large string len (I know what I mean bish)
-*/
 
 char	*ft_strcat(char *s1, const char *s2)
 {

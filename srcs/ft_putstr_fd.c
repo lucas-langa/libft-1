@@ -6,11 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/10 14:49:10 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/10 15:03:09 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:09:09 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putstr_fd(const char *s, int fd)
 {

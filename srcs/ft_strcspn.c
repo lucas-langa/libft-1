@@ -6,11 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 14:16:35 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 14:25:29 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:12:55 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strcspn(const char *s1, const char *s2)
 {

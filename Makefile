@@ -6,7 +6,7 @@
 #    By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/20 16:27:01 by tmaselem          #+#    #+#              #
-#    Updated: 2018/07/12 16:22:24 by tmaselem         ###   ########.fr        #
+#    Updated: 2018/07/14 13:51:25 by tmaselem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC = $(S_PATH)ft_putchar.c $(S_PATH)ft_putstr.c $(S_PATH)ft_strlen.c $(S_PATH)f
 	  $(S_PATH)ft_strequ.c $(S_PATH)ft_strnequ.c $(S_PATH)ft_strsub.c $(S_PATH)ft_strjoin.c \
 	  $(S_PATH)ft_iswhitespace.c $(S_PATH)ft_strtrim.c $(S_PATH)ft_itoa.c $(S_PATH)ft_strsplit.c\
 	  $(S_PATH)ft_putendl.c $(S_PATH)ft_putchar_fd.c $(S_PATH)ft_putstr_fd.c $(S_PATH)ft_putendl_fd.c\
-	  $(S_PATH)ft_putnbr_fd.c $(S_PATH)get_next_line.c\
+	  $(S_PATH)ft_putnbr_fd.c $(S_PATH)get_next_line.c $(S_PATH)ft_lstnew.c \
 
 OBJ = $(SRC:$(S_PATH)%.c=%.o)
 

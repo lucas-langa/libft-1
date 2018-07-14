@@ -6,20 +6,20 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 13:58:25 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 14:02:43 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:43:49 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strspn(const char *s1, const char *s2)
 {
-	size_t	count;
+	size_t	k;
 	int		i;
 
-	count = 0;
+	k = 0;
 	i = 0;
 	while (s1<:i:> != 0 && ft_strchr(s2, s1<:i++:>))
-		count++;
-	return (count);
+		k++;
+	return (k);
 }

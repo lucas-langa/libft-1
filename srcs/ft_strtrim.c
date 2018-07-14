@@ -6,16 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 17:49:25 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 17:37:50 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:45:29 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Using the is whitespace function cleans out code really well
-** strdup and strsub also take away the admin
-*/
-
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strtrim(char const *s)
 {

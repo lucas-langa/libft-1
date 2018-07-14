@@ -6,16 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/27 13:35:20 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/07 14:08:38 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:05:10 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/*
-** Compare src and dst to check if string reversable or not
-** Memory allocated depending diffirence between src and dst
-*/
+#include "../includes/libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 10:46:53 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/08 11:04:39 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 13:56:09 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_clear(char **bits_pcs, size_t len)
 {

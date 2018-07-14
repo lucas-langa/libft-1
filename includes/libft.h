@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 17:29:50 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/12 11:42:06 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 13:52:28 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 # include <string.h>
 # include <fcntl.h>
 
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+t_list				*ft_lstnew(const void *content, size_t content_size);
 int					get_next_line(const int fd, char **line);
 size_t				ft_strlen(const char *str);
 void				ft_putchar(char c);

@@ -6,16 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 17:44:18 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 18:19:01 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 13:59:03 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/*
-** Created ft_numlen to reduce size of ft_atoi
-** used ft_strnew to have mem allocated by the function
-*/
+#include "../includes/libft.h"
 
 static size_t	ft_numlen(int n)
 {

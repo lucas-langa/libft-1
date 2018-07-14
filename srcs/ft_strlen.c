@@ -6,18 +6,18 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 12:44:39 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/08 06:55:12 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:20:37 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlen(const char *src)
 {
 	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src<:i:> != 0)
 	{
 		i++;
 	}

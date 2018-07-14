@@ -6,11 +6,11 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 08:57:31 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/06/09 17:41:31 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/14 14:43:21 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int		ft_wordcount(const char *str, char c, int i)
 {
@@ -58,11 +58,11 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		while (*s == c && *s != '\0')
 			s++;
-		if (!(fresh[j] = ft_strsub(s, 0, ft_lenwo(s, c))))
+		if (!(fresh<:j:> = ft_strsub(s, 0, ft_lenwo(s, c))))
 			return (NULL);
 		s = s + ft_lenwo(s, c);
 		j++;
 	}
-	fresh[j] = NULL;
+	fresh<:j:> = NULL;
 	return (fresh);
 }
