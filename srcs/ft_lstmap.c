@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 12:18:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/16 15:31:45 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/07/16 16:34:25 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/07/16 16:40:07 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*str;
+	t_list	*sortie;
 
-	str = ft_strnew(ft_strlen(s1));
-	if (str == NULL)
-		return (NULL);
-	if (s1)
+	if (lst)
 	{
-		ft_strcpy(str, s1);
+		sortie = f(lst);
+		sortie->next = ft_lstmap(lst->next, f);
+		return (sortie);
 	}
-	return (str);
+	return (NULL);
 }

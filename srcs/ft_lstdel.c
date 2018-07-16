@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 12:18:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/16 15:31:45 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/07/16 12:58:35 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/07/16 15:13:57 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char	*str;
+	t_list	*tmp;
 
-	str = ft_strnew(ft_strlen(s1));
-	if (str == NULL)
-		return (NULL);
-	if (s1)
+	if (!alst || !del)
+		return ;
+	while (*alst)
 	{
-		ft_strcpy(str, s1);
+		tmp = (*alst)->next;
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = tmp;
 	}
-	return (str);
+	*alst = NULL;
+	return ;
 }

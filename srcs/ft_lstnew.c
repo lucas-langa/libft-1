@@ -6,19 +6,19 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/14 13:42:37 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/14 14:37:26 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/16 15:16:50 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_list		*ft_lstnew(const void *content, size_t content_size)
+t_list	*ft_lstnew(const void *content, size_t content_size)
 {
-	t_list		*fresh;
+	t_list	*fresh;
 
 	if ((fresh = (t_list*)ft_memalloc(sizeof(t_list))) == NULL)
 		return (NULL);
-	if (content == NULL) /*can content_size be zero, quiry?*/
+	if (content == NULL)
 	{
 		fresh->content = NULL;
 		fresh->content_size = 0;

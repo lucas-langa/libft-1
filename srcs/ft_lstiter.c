@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 12:18:59 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/16 15:31:45 by tmaselem         ###   ########.fr       */
+/*   Created: 2018/07/16 16:16:44 by tmaselem          #+#    #+#             */
+/*   Updated: 2018/07/16 16:19:37 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *item))
 {
-	char	*str;
-
-	str = ft_strnew(ft_strlen(s1));
-	if (str == NULL)
-		return (NULL);
-	if (s1)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		ft_strcpy(str, s1);
+		(*f)(lst);
+		lst = lst->next;
 	}
-	return (str);
+	return ;
 }

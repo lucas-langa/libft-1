@@ -6,7 +6,7 @@
 /*   By: tmaselem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 15:46:44 by tmaselem          #+#    #+#             */
-/*   Updated: 2018/07/14 14:49:33 by tmaselem         ###   ########.fr       */
+/*   Updated: 2018/07/16 15:32:42 by tmaselem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 			}
 	return (dst);
 }
-
