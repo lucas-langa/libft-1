@@ -2,8 +2,12 @@
 
 void	is_under_21(char *name, int	age)
 {
+	/*
+	* magic numbers
+	*/
 	ft_putstr(name);
 	ft_putchar(32);
+	//32 means space
 	ft_putstr("is");
 	ft_putchar(32);
 	ft_putnbr(age);
@@ -13,7 +17,9 @@ void	is_under_21(char *name, int	age)
 
 void	is_trev(int age)
 {
-	if ( age < 24)
+	if (age <= 0)
+		ft_putendl("Trevor, you cannot even walk let alone code at this point in time");
+	if (age < 24)
 		ft_putendl("Trevor, you are much older than that");
 	else
 		ft_putendl("I have said too much!");
@@ -21,14 +27,18 @@ void	is_trev(int age)
 
 void	is_legal(char *name, int age)
 {
+	/*
+	* magic numbers
+	*/
 	ft_putstr(name);
 	ft_putchar(32);
 	ft_putstr("is");
 	ft_putchar(32);
 	ft_putnbr(age);
-	ft_putchar(32);
+	ft_putchar(' ');
 	ft_putstr("they can party with me anyday!");
-	ft_putchar(10);
+	ft_putchar('\n');
+	//newline
 }
 
 int	main(int ac, char **av)
@@ -38,6 +48,9 @@ int	main(int ac, char **av)
 
 	if (ac == 3)
 	{
+		/*
+		*	some cool error handling stuff here, like stupid stuff
+		*/
 		age = ft_atoi(av[2]);
 		name = ft_strdup(av[1]);
 		if (ft_strcmp(name, "Trevor") == 0)
